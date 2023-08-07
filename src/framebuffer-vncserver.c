@@ -242,7 +242,7 @@ int timeToLogFPS() {
 /*****************************************************************************/
 //#define COLOR_MASK  0x1f001f
 #define COLOR_MASK  (((1 << BITS_PER_SAMPLE) << 1) - 1)
-#define PIXEL_FB_TO_RFB(p,r_offset,g_offset,b_offset) \
+#define PIXEL_FB_TO_RFB(p,b_offset,g_offset,r_offset) \
     ((p>>r_offset)&COLOR_MASK) | (((p>>g_offset)&COLOR_MASK)<<BITS_PER_SAMPLE) | (((p>>b_offset)&COLOR_MASK)<<(2*BITS_PER_SAMPLE))
 
 static void update_screen(void)
